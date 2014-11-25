@@ -15,6 +15,10 @@
 		F492B49B1A24A41100E9F38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F492B49A1A24A41100E9F38E /* Images.xcassets */; };
 		F492B49E1A24A41100E9F38E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F492B49C1A24A41100E9F38E /* LaunchScreen.xib */; };
 		F492B4AA1A24A41100E9F38E /* youmitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B4A91A24A41100E9F38E /* youmitterTests.m */; };
+		F492B4BC1A24A9D000E9F38E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B4BB1A24A9D000E9F38E /* LoginViewController.m */; };
+		F492B4C21A24ABDD00E9F38E /* LoginMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B4C11A24ABDD00E9F38E /* LoginMapper.m */; };
+		F492B4C51A24AC0C00E9F38E /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B4C41A24AC0C00E9F38E /* LoginService.m */; };
+		F492B4C81A24ACD800E9F38E /* HTTPNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B4C71A24ACD800E9F38E /* HTTPNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,14 @@
 		F492B4A31A24A41100E9F38E /* youmitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = youmitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492B4A81A24A41100E9F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F492B4A91A24A41100E9F38E /* youmitterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = youmitterTests.m; sourceTree = "<group>"; };
+		F492B4BA1A24A9D000E9F38E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F492B4BB1A24A9D000E9F38E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F492B4C01A24ABDD00E9F38E /* LoginMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginMapper.h; sourceTree = "<group>"; };
+		F492B4C11A24ABDD00E9F38E /* LoginMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginMapper.m; sourceTree = "<group>"; };
+		F492B4C31A24AC0C00E9F38E /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		F492B4C41A24AC0C00E9F38E /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		F492B4C61A24ACD800E9F38E /* HTTPNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPNetwork.h; sourceTree = "<group>"; };
+		F492B4C71A24ACD800E9F38E /* HTTPNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPNetwork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +95,12 @@
 		F492B4891A24A41100E9F38E /* youmitter */ = {
 			isa = PBXGroup;
 			children = (
+				F492B4B61A24A50400E9F38E /* HTTP */,
+				F492B4B51A24A4FA00E9F38E /* Mapper */,
+				F492B4B41A24A4DF00E9F38E /* Service */,
+				F492B4B31A24A4C200E9F38E /* View */,
 				F492B48E1A24A41100E9F38E /* AppDelegate.h */,
 				F492B48F1A24A41100E9F38E /* AppDelegate.m */,
-				F492B4941A24A41100E9F38E /* ViewController.h */,
-				F492B4951A24A41100E9F38E /* ViewController.m */,
-				F492B4971A24A41100E9F38E /* Main.storyboard */,
 				F492B49A1A24A41100E9F38E /* Images.xcassets */,
 				F492B49C1A24A41100E9F38E /* LaunchScreen.xib */,
 				F492B4911A24A41100E9F38E /* youmitter.xcdatamodeld */,
@@ -120,6 +133,45 @@
 				F492B4A81A24A41100E9F38E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F492B4B31A24A4C200E9F38E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F492B4941A24A41100E9F38E /* ViewController.h */,
+				F492B4951A24A41100E9F38E /* ViewController.m */,
+				F492B4971A24A41100E9F38E /* Main.storyboard */,
+				F492B4BA1A24A9D000E9F38E /* LoginViewController.h */,
+				F492B4BB1A24A9D000E9F38E /* LoginViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F492B4B41A24A4DF00E9F38E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F492B4C31A24AC0C00E9F38E /* LoginService.h */,
+				F492B4C41A24AC0C00E9F38E /* LoginService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		F492B4B51A24A4FA00E9F38E /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				F492B4C01A24ABDD00E9F38E /* LoginMapper.h */,
+				F492B4C11A24ABDD00E9F38E /* LoginMapper.m */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		F492B4B61A24A50400E9F38E /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				F492B4C61A24ACD800E9F38E /* HTTPNetwork.h */,
+				F492B4C71A24ACD800E9F38E /* HTTPNetwork.m */,
+			);
+			name = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +276,12 @@
 			files = (
 				F492B4901A24A41100E9F38E /* AppDelegate.m in Sources */,
 				F492B48D1A24A41100E9F38E /* main.m in Sources */,
+				F492B4C81A24ACD800E9F38E /* HTTPNetwork.m in Sources */,
 				F492B4961A24A41100E9F38E /* ViewController.m in Sources */,
+				F492B4C51A24AC0C00E9F38E /* LoginService.m in Sources */,
 				F492B4931A24A41100E9F38E /* youmitter.xcdatamodeld in Sources */,
+				F492B4BC1A24A9D000E9F38E /* LoginViewController.m in Sources */,
+				F492B4C21A24ABDD00E9F38E /* LoginMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

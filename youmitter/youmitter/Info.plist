@@ -43,5 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ServiceRoot</key>
+	<string>http://youmitter-dev.herokuapp.com/api/</string>
 </dict>
 </plist>

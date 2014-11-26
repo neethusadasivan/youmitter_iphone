@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController;
+
+
+- (IBAction)buttonClicked:(id)Login {
+    NSLog(@"Button pressed: %@", [sender currentTitle]);
+}
 
 @end
+

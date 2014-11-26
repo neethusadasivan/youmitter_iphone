@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
 
-@interface HTTPNetwork : NSObject
+@interface HTTPNetwork : NSObject<NSURLSessionDelegate, NSURLSessionDataDelegate>
+@property (nonatomic, strong)NSURL *baseURL;
 
+@property (nonatomic, strong)NSMutableArray *taskArray;
+
+-(void)callRemoteServiceWithParameters: (NSDictionary )parameters andMethod:(XPMethodType)method
+                               success:(void (^)(id responseObject))success
+                               failure:(void (^)(NSError *eerror))failure;
+
+
+- (void)cancelAllOperations;
 @end

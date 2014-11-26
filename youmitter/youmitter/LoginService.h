@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface LoginService : NSObject
-
+- (void) loginWithUserName:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(id loginResponse))block;
 @end

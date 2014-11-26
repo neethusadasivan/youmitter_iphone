@@ -10,4 +10,6 @@
 
 @interface LoginMapper : NSObject
 
+
+
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08A753041A24B2F700DDFF35 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A753031A24B2F700DDFF35 /* UserInfo.m */; };
+		08A753081A24BC1300DDFF35 /* XPCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A753061A24BC1300DDFF35 /* XPCoreData.m */; };
+		08A7530A1A24BF0D00DDFF35 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A753091A24BF0D00DDFF35 /* CoreData.framework */; };
+		08A7530C1A24BFBD00DDFF35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A7530B1A24BFBD00DDFF35 /* Foundation.framework */; };
+		08A7530E1A24BFC700DDFF35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A7530D1A24BFC700DDFF35 /* UIKit.framework */; };
 		F492B48D1A24A41100E9F38E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B48C1A24A41100E9F38E /* main.m */; };
 		F492B4901A24A41100E9F38E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B48F1A24A41100E9F38E /* AppDelegate.m */; };
 		F492B4931A24A41100E9F38E /* youmitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F492B4911A24A41100E9F38E /* youmitter.xcdatamodeld */; };
@@ -32,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08A753021A24B2F700DDFF35 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		08A753031A24B2F700DDFF35 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		08A753061A24BC1300DDFF35 /* XPCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCoreData.m; sourceTree = "<group>"; };
+		08A753071A24BC1300DDFF35 /* XPCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCoreData.h; sourceTree = "<group>"; };
+		08A753091A24BF0D00DDFF35 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		08A7530B1A24BFBD00DDFF35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		08A7530D1A24BFC700DDFF35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		08A7530F1A25BFCA00DDFF35 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		F492B4871A24A41100E9F38E /* youmitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youmitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492B48B1A24A41100E9F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F492B48C1A24A41100E9F38E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A7530E1A24BFC700DDFF35 /* UIKit.framework in Frameworks */,
+				08A7530C1A24BFBD00DDFF35 /* Foundation.framework in Frameworks */,
+				08A7530A1A24BF0D00DDFF35 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +90,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A752FE1A24B2B100DDFF35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08A753021A24B2F700DDFF35 /* UserInfo.h */,
+				08A753031A24B2F700DDFF35 /* UserInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		08A753051A24BB9300DDFF35 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				08A753071A24BC1300DDFF35 /* XPCoreData.h */,
+				08A753061A24BC1300DDFF35 /* XPCoreData.m */,
+				08A7530F1A25BFCA00DDFF35 /* Constants.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		F492B47E1A24A41000E9F38E = {
 			isa = PBXGroup;
 			children = (
+				08A7530D1A24BFC700DDFF35 /* UIKit.framework */,
+				08A7530B1A24BFBD00DDFF35 /* Foundation.framework */,
+				08A753091A24BF0D00DDFF35 /* CoreData.framework */,
 				F492B4891A24A41100E9F38E /* youmitter */,
 				F492B4A61A24A41100E9F38E /* youmitterTests */,
 				F492B4881A24A41100E9F38E /* Products */,
@@ -95,6 +133,8 @@
 		F492B4891A24A41100E9F38E /* youmitter */ = {
 			isa = PBXGroup;
 			children = (
+				08A753051A24BB9300DDFF35 /* Utilities */,
+				08A752FE1A24B2B100DDFF35 /* Model */,
 				F492B4B61A24A50400E9F38E /* HTTP */,
 				F492B4B51A24A4FA00E9F38E /* Mapper */,
 				F492B4B41A24A4DF00E9F38E /* Service */,
@@ -275,12 +315,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F492B4901A24A41100E9F38E /* AppDelegate.m in Sources */,
+				08A753041A24B2F700DDFF35 /* UserInfo.m in Sources */,
 				F492B48D1A24A41100E9F38E /* main.m in Sources */,
 				F492B4C81A24ACD800E9F38E /* HTTPNetwork.m in Sources */,
 				F492B4961A24A41100E9F38E /* ViewController.m in Sources */,
 				F492B4C51A24AC0C00E9F38E /* LoginService.m in Sources */,
 				F492B4931A24A41100E9F38E /* youmitter.xcdatamodeld in Sources */,
 				F492B4BC1A24A9D000E9F38E /* LoginViewController.m in Sources */,
+				08A753081A24BC1300DDFF35 /* XPCoreData.m in Sources */,
 				F492B4C21A24ABDD00E9F38E /* LoginMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +516,7 @@
 				F492B4AF1A24A41100E9F38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F492B4B01A24A41100E9F38E /* Build configuration list for PBXNativeTarget "youmitterTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +525,7 @@
 				F492B4B21A24A41100E9F38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

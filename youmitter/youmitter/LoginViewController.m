@@ -6,10 +6,16 @@
 //  Copyright (c) 2014 Ruby Software. All rights reserved.
 //
 
+
 #import "LoginViewController.h"
+#import "LoginService.h"
 
 @interface LoginViewController ()
-
+{
+    IBOutlet UITextField *userNameTextField;
+    IBOutlet UITextField *passwordTextField;
+}
+-(IBAction)loginButtonClicked:(id)sender;
 @end
 
 @implementation LoginViewController
@@ -33,5 +39,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)loginButtonClicked:(id)sender
+{
+    LoginService *service  = [[LoginService alloc]init];
+    [service loginWithUserName:userNameTextField.text andPassword:passwordTextField.text withBlock:^(id loginResponse) {
+        
+    }];
+    
+}
 
 @end

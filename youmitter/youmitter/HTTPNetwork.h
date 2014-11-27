@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong)NSMutableArray *taskArray;
 
--(void)callRemoteServiceWithParameters: (NSDictionary )parameters andMethod:(XPMethodType)method
+-(void)callRemoteServiceWithParameters: (NSDictionary *)parameters andMethod:(XPMethodType)method
                                success:(void (^)(id responseObject))success
                                failure:(void (^)(NSError *eerror))failure;
 

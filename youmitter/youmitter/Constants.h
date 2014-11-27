@@ -12,6 +12,6 @@ typedef enum{
     XPMethodTypeSimplePost
 }XPMethodType;
 
-static NSString *SIGNIN_API_URL = @"/sign_in.json?";
+static NSString *SIGNIN_API_URL = @"sign_in.json?";
 
 #endif

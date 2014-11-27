@@ -9,6 +9,7 @@
 
 #import "LoginViewController.h"
 #import "LoginService.h"
+#import "HomeViewController.h"
 
 @interface LoginViewController ()
 {
@@ -44,6 +45,13 @@
 {
     LoginService *service  = [[LoginService alloc]init];
     [service loginWithUserName:userNameTextField.text andPassword:passwordTextField.text withBlock:^(id loginResponse) {
+        NSString *responseAuth = loginResponse;
+        
+        if ([responseAuth isEqualToString:@"Sucess"]) {
+            HomeViewController *homeVC = [[HomeViewController alloc]init];
+            [self.navigationController pushViewController:homeVC animated:YES];
+            
+        }
         
     }];
     

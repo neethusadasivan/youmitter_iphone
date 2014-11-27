@@ -42,33 +42,26 @@ failure:(void (^)(NSError *eerror))failure{
             
             NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
             NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
-            
-            
-            
-            
-            
-            
-            
-            NSString *apiUrl = [NSString stringWithFormat:@"%@%@",[self.baseURL description],[parameters objectForKey:@"apiUrl"]];
-            
+            NSString *postString = [parameters objectForKey:@"apiString"];
+            NSString *apiUrl = [NSString stringWithFormat:@"%@%@%@",[self.baseURL description],[parameters objectForKey:@"apiUrl"],postString];
             NSURL *url = [NSURL URLWithString:apiUrl];
-            
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                                    cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                                timeoutInterval:60.0];
-            
             [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-            
-            [request setHTTPMethod:@"POST"];
-            
-            
-            
-            NSString *postString = [parameters objectForKey:@"postString"];
-            [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-            
-            
+            [request setHTTPMethod:@"GET"];
             NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                
+                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+                
+                if(dict)
+                {
+                    success(dict);
+                }
+                else{
+                    failure(error);
+                }
                 NSLog(@"Comes here");
             }];
             

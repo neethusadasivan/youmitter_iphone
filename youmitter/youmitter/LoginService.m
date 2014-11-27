@@ -9,6 +9,7 @@
 #import "LoginService.h"
 #import "Constants.h"
 #import "HTTPNetwork.h"
+#import "LoginMapper.h"
 
 @implementation LoginService
 - (void) loginWithUserName:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(id loginResponse))block
@@ -28,6 +29,11 @@
     HTTPNetwork *networkService = [[HTTPNetwork alloc]init];
     
     [networkService callRemoteServiceWithParameters:requestDict andMethod:XPMethodTypeSimplePost success:^(id responseObject) {
+        NSDictionary *responseDict = responseObject;
+        LoginMapper *mapper = [[LoginMapper alloc]init];
+        [mapper insertUserInfo:responseDict];
+        
+        block([responseDict objectForKey:@"authentication"]);
         
     } failure:^(NSError *eerror) {
         
@@ -45,6 +51,15 @@
 {
     return [NSString stringWithFormat:@"username=%@&password=%@", username, password];
 }
+
+//-(NSMutableDictionary *)theApiStringFor:(NSString *)username andPassword:(NSString *)password
+//{
+//    NSMutableDictionary *parameterDict  = [[NSMutableDictionary alloc]init];
+//    
+//    [parameterDict setObject:username forKey:@"username"];
+//    [parameterDict setObject:password forKey:@"password"];
+//    return parameterDict;
+//}
 
 
 @end

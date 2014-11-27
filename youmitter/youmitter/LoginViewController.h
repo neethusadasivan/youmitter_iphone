@@ -11,9 +11,7 @@
 @interface LoginViewController : UIViewController;
 
 
-- (IBAction)buttonClicked:(id)Login {
-    NSLog(@"Button pressed: %@", [sender currentTitle]);
-}
+- (IBAction)buttonClicked:(id)Login;
 
 @end
 

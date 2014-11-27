@@ -16,8 +16,8 @@
     NSManagedObjectContext* context = [[XPCoreData sharedDataManager]managedObjectContext];
     
     NSMutableDictionary *userDic = [dictCategory objectForKey:@""];
-    if(userDic == nil || [userDic isKindOfClass:[NSNull class]])return;
-    UserInfo *userInfo = [self fetchUserInfoWithApiKey:[userDic objectForKey:@"api_key"]];
+    if(dictCategory == nil )return;
+    UserInfo *userInfo = [self fetchUserInfoWithApiKey:[dictCategory objectForKey:@"api_key"]];
     if(userInfo == nil)
     {
         userInfo = [NSEntityDescription insertNewObjectForEntityForName:@"UserInfo" inManagedObjectContext:context];
@@ -34,12 +34,12 @@
     }
 }
 
-- (UserInfo *)fetchUserInfoWithApiKey:(NSNumber *)apiKey
+- (UserInfo *)fetchUserInfoWithApiKey:(NSString *)apiKey
 {
     NSManagedObjectContext* context = [[XPCoreData sharedDataManager]managedObjectContext];
     NSError *error = nil;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"api_key == %@", [apiKey stringValue]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"api_key == %@", apiKey];
     [fetchRequest setPredicate:predicate];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"UserInfo" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];

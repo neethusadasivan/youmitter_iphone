@@ -10,6 +10,6 @@
 
 @interface LoginMapper : NSObject
 
-
+-(void)insertUserInfo:(NSMutableDictionary *)dictCategory;
 
 @end

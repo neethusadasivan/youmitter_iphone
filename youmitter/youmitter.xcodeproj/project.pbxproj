@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085C06021A2855F200E0548F /* ConstellationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085C05FA1A2855F200E0548F /* ConstellationViewController.m */; };
+		085C06031A2855F200E0548F /* ConstellationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085C05FB1A2855F200E0548F /* ConstellationViewController.xib */; };
+		085C06041A2855F200E0548F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085C05FD1A2855F200E0548F /* HomeViewController.m */; };
+		085C06051A2855F200E0548F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085C05FE1A2855F200E0548F /* HomeViewController.xib */; };
+		085C060B1A285B8D00E0548F /* YouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085C06091A285B8D00E0548F /* YouViewController.m */; };
+		085C060C1A285B8D00E0548F /* YouViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085C060A1A285B8D00E0548F /* YouViewController.xib */; };
 		08A753041A24B2F700DDFF35 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A753031A24B2F700DDFF35 /* UserInfo.m */; };
 		08A753081A24BC1300DDFF35 /* XPCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A753061A24BC1300DDFF35 /* XPCoreData.m */; };
 		08A7530A1A24BF0D00DDFF35 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A753091A24BF0D00DDFF35 /* CoreData.framework */; };
@@ -15,7 +21,6 @@
 		F492B48D1A24A41100E9F38E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B48C1A24A41100E9F38E /* main.m */; };
 		F492B4901A24A41100E9F38E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B48F1A24A41100E9F38E /* AppDelegate.m */; };
 		F492B4931A24A41100E9F38E /* youmitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F492B4911A24A41100E9F38E /* youmitter.xcdatamodeld */; };
-		F492B4961A24A41100E9F38E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F492B4951A24A41100E9F38E /* ViewController.m */; };
 		F492B4991A24A41100E9F38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F492B4971A24A41100E9F38E /* Main.storyboard */; };
 		F492B49B1A24A41100E9F38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F492B49A1A24A41100E9F38E /* Images.xcassets */; };
 		F492B49E1A24A41100E9F38E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F492B49C1A24A41100E9F38E /* LaunchScreen.xib */; };
@@ -37,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085C05F91A2855F200E0548F /* ConstellationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstellationViewController.h; sourceTree = "<group>"; };
+		085C05FA1A2855F200E0548F /* ConstellationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstellationViewController.m; sourceTree = "<group>"; };
+		085C05FB1A2855F200E0548F /* ConstellationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConstellationViewController.xib; sourceTree = "<group>"; };
+		085C05FC1A2855F200E0548F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		085C05FD1A2855F200E0548F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		085C05FE1A2855F200E0548F /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		085C06081A285B8D00E0548F /* YouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouViewController.h; sourceTree = "<group>"; };
+		085C06091A285B8D00E0548F /* YouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouViewController.m; sourceTree = "<group>"; };
+		085C060A1A285B8D00E0548F /* YouViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YouViewController.xib; sourceTree = "<group>"; };
 		08A753021A24B2F700DDFF35 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		08A753031A24B2F700DDFF35 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		08A753061A24BC1300DDFF35 /* XPCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCoreData.m; sourceTree = "<group>"; };
@@ -51,8 +65,6 @@
 		F492B48E1A24A41100E9F38E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F492B48F1A24A41100E9F38E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F492B4921A24A41100E9F38E /* youmitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = youmitter.xcdatamodel; sourceTree = "<group>"; };
-		F492B4941A24A41100E9F38E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F492B4951A24A41100E9F38E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F492B4981A24A41100E9F38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F492B49A1A24A41100E9F38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F492B49D1A24A41100E9F38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -90,6 +102,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		085C060D1A285C2D00E0548F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F492B4971A24A41100E9F38E /* Main.storyboard */,
+				F492B4BA1A24A9D000E9F38E /* LoginViewController.h */,
+				F492B4BB1A24A9D000E9F38E /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		085C060E1A285C5400E0548F /* Constellation */ = {
+			isa = PBXGroup;
+			children = (
+				085C05F91A2855F200E0548F /* ConstellationViewController.h */,
+				085C05FA1A2855F200E0548F /* ConstellationViewController.m */,
+				085C05FB1A2855F200E0548F /* ConstellationViewController.xib */,
+			);
+			name = Constellation;
+			sourceTree = "<group>";
+		};
+		085C060F1A285C5F00E0548F /* You */ = {
+			isa = PBXGroup;
+			children = (
+				085C06081A285B8D00E0548F /* YouViewController.h */,
+				085C06091A285B8D00E0548F /* YouViewController.m */,
+				085C060A1A285B8D00E0548F /* YouViewController.xib */,
+			);
+			name = You;
+			sourceTree = "<group>";
+		};
+		085C06101A285C8500E0548F /* Universe */ = {
+			isa = PBXGroup;
+			children = (
+				085C05FC1A2855F200E0548F /* HomeViewController.h */,
+				085C05FD1A2855F200E0548F /* HomeViewController.m */,
+				085C05FE1A2855F200E0548F /* HomeViewController.xib */,
+			);
+			name = Universe;
+			sourceTree = "<group>";
+		};
 		08A752FE1A24B2B100DDFF35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,11 +230,10 @@
 		F492B4B31A24A4C200E9F38E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F492B4941A24A41100E9F38E /* ViewController.h */,
-				F492B4951A24A41100E9F38E /* ViewController.m */,
-				F492B4971A24A41100E9F38E /* Main.storyboard */,
-				F492B4BA1A24A9D000E9F38E /* LoginViewController.h */,
-				F492B4BB1A24A9D000E9F38E /* LoginViewController.m */,
+				085C06101A285C8500E0548F /* Universe */,
+				085C060F1A285C5F00E0548F /* You */,
+				085C060E1A285C5400E0548F /* Constellation */,
+				085C060D1A285C2D00E0548F /* Login */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -296,6 +347,9 @@
 			files = (
 				F492B4991A24A41100E9F38E /* Main.storyboard in Resources */,
 				F492B49E1A24A41100E9F38E /* LaunchScreen.xib in Resources */,
+				085C060C1A285B8D00E0548F /* YouViewController.xib in Resources */,
+				085C06051A2855F200E0548F /* HomeViewController.xib in Resources */,
+				085C06031A2855F200E0548F /* ConstellationViewController.xib in Resources */,
 				F492B49B1A24A41100E9F38E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,16 +368,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085C060B1A285B8D00E0548F /* YouViewController.m in Sources */,
 				F492B4901A24A41100E9F38E /* AppDelegate.m in Sources */,
 				08A753041A24B2F700DDFF35 /* UserInfo.m in Sources */,
 				F492B48D1A24A41100E9F38E /* main.m in Sources */,
+				085C06021A2855F200E0548F /* ConstellationViewController.m in Sources */,
 				F492B4C81A24ACD800E9F38E /* HTTPNetwork.m in Sources */,
-				F492B4961A24A41100E9F38E /* ViewController.m in Sources */,
 				F492B4C51A24AC0C00E9F38E /* LoginService.m in Sources */,
 				F492B4931A24A41100E9F38E /* youmitter.xcdatamodeld in Sources */,
 				F492B4BC1A24A9D000E9F38E /* LoginViewController.m in Sources */,
 				08A753081A24BC1300DDFF35 /* XPCoreData.m in Sources */,
 				F492B4C21A24ABDD00E9F38E /* LoginMapper.m in Sources */,
+				085C06041A2855F200E0548F /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

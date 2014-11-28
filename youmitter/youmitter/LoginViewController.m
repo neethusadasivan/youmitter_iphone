@@ -10,20 +10,29 @@
 #import "LoginViewController.h"
 #import "LoginService.h"
 #import "HomeViewController.h"
+#import "ConstellationViewController.h"
+#import "YouViewController.h"
+
 
 @interface LoginViewController ()
 {
     IBOutlet UITextField *userNameTextField;
     IBOutlet UITextField *passwordTextField;
 }
+@property (nonatomic,strong)HomeViewController *homeViewController;
+@property (nonatomic,strong)ConstellationViewController *constellationViewController;
+@property (nonatomic,strong)YouViewController *youViewController;
+
 -(IBAction)loginButtonClicked:(id)sender;
 @end
 
 @implementation LoginViewController
+@synthesize homeViewController, constellationViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,8 +57,28 @@
         NSString *responseAuth = loginResponse;
         
         if ([responseAuth isEqualToString:@"Sucess"]) {
-            HomeViewController *homeVC = [[HomeViewController alloc]init];
-            [self.navigationController pushViewController:homeVC animated:YES];
+            
+            self.tabBarController.tabBar.hidden = NO;
+            
+            
+            self.homeViewController =[[HomeViewController alloc]init];
+            self.constellationViewController = [[ConstellationViewController alloc]init];
+            self.youViewController = [[YouViewController alloc]init];
+            
+            
+            UINavigationController *universeNavigationController = [[UINavigationController alloc]initWithRootViewController:self.homeViewController];
+            universeNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Universe" image:nil tag:0];
+
+            UINavigationController *constellationNavigationController = [[UINavigationController alloc]initWithRootViewController:self.constellationViewController];
+            constellationNavigationController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Constellation" image:nil tag:2];
+            
+            UINavigationController *youNavigationViewController = [[UINavigationController alloc]initWithRootViewController:self.youViewController];
+            youNavigationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"You" image:nil tag:1];
+            
+            
+            self.tabBarController.viewControllers = [[NSArray alloc]initWithObjects:universeNavigationController,youNavigationViewController,constellationNavigationController,nil];
+            
+            
             
         }
         

@@ -1,32 +1,22 @@
 //
-//  HomeViewController.m
+//  YouViewController.m
 //  youmitter
 //
-//  Created by HOME on 26/11/14.
+//  Created by Sreekanth on 11/28/14.
 //  Copyright (c) 2014 Ruby Software. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "YouViewController.h"
 
-@interface HomeViewController ()
+@interface YouViewController ()
 
 @end
 
-@implementation HomeViewController
-
--(id)init
-{
-    self = [super init];
-    if (self) {
-
-    }
-    return self;
-}
+@implementation YouViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
 }
 
 - (void)didReceiveMemoryWarning {
